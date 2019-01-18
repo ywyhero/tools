@@ -1,0 +1,7 @@
+<view class="tools">
+    <image class="tools-img" mode="aspectFill" src="./../../assets/images/img.jpeg"></image>
+    <view class="tools-lists">
+        <view class="tools-list" wx:for="{{toolsLists}}" wx:key="index" data-index="{{index}}" bindtap="toDetail">{{item.value}}</view>
+        <view class="tools-list tools-unopen">新功能开发中...</view>
+    </view>
+</view>

@@ -1,0 +1,20 @@
+<view class="tax"> 
+    <view class="tax-tag">起征点：5000元(已实际到手为准)</view>
+    <view class="tax-box">
+        <view class="tax-text">税前工资：</view>
+        <input bindinput="taxInput" placeholder="请输入您的税前薪资" value="{{taxVal}}" class="tax-input" type="number"/>
+    </view>
+    <view class="tax-box">
+        <view class="tax-text">社保需缴：</view>
+        <input placeholder="您社保需要缴纳的部分" value="{{socialVal}}" disabled class="tax-input" type="number"/>
+    </view>
+    <view class="tax-box">
+        <view class="tax-text">个税扣除：</view>
+        <input placeholder="您个税需要缴纳的部分"  value="{{personalVal}}"disabled class="tax-input" type="number"/>
+    </view>
+    <view class="tax-box">
+        <view class="tax-text">税后薪资：</view>
+        <input placeholder="您拿到手的薪资" disabled value="{{taxAfterVale}}" class="tax-input" type="number"/>
+    </view>
+    <button class="tax-btn" bindtap="taxCompute">薪资计算</button>
+</view>

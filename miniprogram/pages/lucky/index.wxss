@@ -1,0 +1,19 @@
+.eat{
+    padding-top: 400rpx;
+}
+
+.eat-value{
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 40rpx;
+    font-weight: 700;
+    margin-bottom: 120rpx;
+}
+
+.eat-btn{
+    width: 300rpx;
+    height: 60rpx;
+    color: #4a4a4a;
+    text-align: center;
+    line-height: 60rpx;
+}

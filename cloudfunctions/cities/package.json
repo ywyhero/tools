@@ -1,0 +1,6 @@
+{
+  "name": "cities",
+  "dependencies": {
+    "wx-server-sdk": "^0.1.3"
+  }
+}

@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container" wx:if="{{isShow}}">
+  <image class="userinfo-avatar" src="{{avatarUrl}}"></image>
+  <view class="userinfo-name">白领小工具</view>
+  <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-btn"
+    >授权登录</button>
+  </view>
+
+</view>

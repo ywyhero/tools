@@ -1,0 +1,29 @@
+.tax{
+    padding: 40rpx;
+}
+.tax-tag{
+    font-size: 24rpx;
+    margin-bottom: 40rpx;
+}
+.tax-box{
+    display: flex;
+    margin-bottom: 40rpx;
+}
+.tax-text{
+    color: #4a4a4a;
+}
+.tax-input{
+    box-sizing: border-box;
+    border: 2rpx solid #4a4a4a;
+    padding: 10rpx; 
+    font-size: 24rpx;
+    width: 400rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+.tax-btn{
+    color: #4a4a4a;
+    background: #fff;
+    font-size: 30rpx;
+    font-weight: 700;
+}

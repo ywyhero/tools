@@ -1,0 +1,5 @@
+<view class="eat">
+    <view class="eat-value">{{lists[index].name}}</view>
+    <button class="eat-btn" hidden="{{!isShow}}" bindtap="eatClick">{{selectVal}}</button>
+    <button class="eat-btn" hidden="{{isShow}}" bindtap="stopClick">{{selectedVal}}</button>
+</view>

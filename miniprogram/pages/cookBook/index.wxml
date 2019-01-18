@@ -1,0 +1,22 @@
+<view class="cook-book">
+    <view class="cook-book-search">
+        <input type="text" placeholder="请输入您想做的菜" bindinput="bindInput" value="{{searchVal}}" class="cook-book-search"/>
+        <button class="cook-book-search-btn" bindtap="searchResult">搜索</button>
+    </view>
+    <view class="cook-book-lists">
+        <view class="cook-book-list" wx:for="{{lists}}" wx:key="index">
+            <view class="cook-book-list-title">{{item.title}}</view>
+            <view class="cook-book-list-tags">{{item.tags}}</view>
+            <view class="cook-book-list-imtro">{{item.imtro}}</view>
+            <view class="cook-book-list-ingredients">{{item.ingredients}}</view>
+            <view class="cook-book-list-burden">{{item.burden}}</view>
+            <image wx:for="{{item.albums}}" wx:for-item="itm" wx:for-index="idx" wx:key="idx" src="{{itm}}"></image>
+            <view class="cook-book-list-steps">
+                <view class="cook-book-list-step" wx:for="{{item.steps}}" wx:for-item="im" wx:for-index="ix" wx:key="ix">
+                    <image class="cook-book-list-step-image" src="{{im.img}}"></image>
+                    <view class="cook-book-list-step-value">{{im.step}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
