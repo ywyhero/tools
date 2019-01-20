@@ -12,10 +12,10 @@ cloud.init()
 
 exports.main = async (event, context) => {
     try{
-        let {menu, page} = event
+        let {menu, pn, rn} = event
         let data = await rq({
             method:'get',
-            url: `http://apis.juhe.cn/cook/query.php?menu=${encodeURI(menu)}&pn=${page}&dtype==json&key=8c533b97721bad2c6734c93e9b630701`
+            url: `http://apis.juhe.cn/cook/query.php?menu=${encodeURI(menu)}&pn=${pn}&rn=${rn}&dtype==json&key=8c533b97721bad2c6734c93e9b630701`
         })
         data = JSON.parse(data)
         return {

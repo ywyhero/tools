@@ -42,12 +42,13 @@ Page({
                 url: '/pages/tools/index'
             })
             const userInfo = e.detail.userInfo;
+          wx.showNavigationBarLoading()
             wx.cloud.callFunction({
                 name: 'login',
                 data: userInfo
             })
             .then(res => {
-                
+              wx.hideNavigationBarLoading()
                 app.globalData.userInfo = e.detail.userInfo;
             })
             

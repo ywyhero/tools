@@ -1,0 +1,24 @@
+ <view class="cook-detail-list" >
+
+    <view class="cook-detail-list-title">{{list.title}}</view>
+    <image mode="aspectFill" wx:for="{{list.albums}}" wx:for-item="itm" wx:for-index="idx" wx:key="idx" src="{{itm}}" class="cook-detail-list-image" />
+    <view class="cook-detail-list-tags">
+      <view class="cook-detail-list-tags-value">标签:</view>
+      {{list.tags}}</view>
+    <view class="cook-detail-list-ingredients">
+      <view class="cook-detail-list-ingredients-value">主料:</view>
+
+      {{list.ingredients}}</view>
+    <view class="cook-detail-list-burden">
+      <view class='cook-detail-list-burden-value'>辅料:</view>
+      {{list.burden}}</view>
+
+    <view class="cook-detail-list-steps">
+      <view class="cook-detail-list-steps-value">做法:</view>
+      <view class="cook-detail-list-step" wx:for="{{list.steps}}" wx:for-item="im" wx:for-index="ix" wx:key="ix">
+        <view class="cook-detail-list-step-value">{{im.step}}</view>
+        <image mode="aspectFill" class="cook-detail-list-step-image" src="{{im.img}}"></image>
+
+      </view>
+    </view>
+  </view>

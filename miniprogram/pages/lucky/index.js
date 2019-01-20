@@ -8,9 +8,7 @@ Page({
     },
     onLoad(options) {
         console.log(options)
-        wx.showLoading({
-            title: "拼命加载中..."
-        })
+      wx.showNavigationBarLoading()
         let name = '',
         selectVal='',
         selectedVal=''
@@ -34,7 +32,7 @@ Page({
                 selectVal,
                 selectedVal
             })
-            wx.hideLoading()
+          wx.hideNavigationBarLoading()
         })
         
     },

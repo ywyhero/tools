@@ -1,0 +1,46 @@
+
+.cook-detail-list{
+   padding: 20rpx;
+  color: #4a4a4a;
+}
+.cook-detail-list-title{
+  text-align: center;
+  font-weight: 700;
+  font-size: 32rpx;
+  color: #4a4a4a;
+  margin-bottom: 10rpx;
+}
+.cook-detail-list-image{
+  width: 100%;
+  height: 400rpx;
+}
+.cook-detail-list-tags,
+.cook-detail-list-ingredients,
+.cook-detail-list-burden{
+  font-size: 28rpx;
+  color: #4a4a4a;
+  margin-bottom: 10rpx;
+}
+.cook-detail-list-tags-value,
+.cook-detail-list-ingredients-value,
+.cook-detail-list-burden-value{
+  font-size: 32rpx;
+  color: #4a4a4a;
+  font-weight: 700;
+}
+.cook-detail-list-steps-value{
+  font-weight: 700;
+  font-size: 32rpx;
+  color: #4a4a4a;
+}
+.cook-detail-list-step{
+
+}
+.cook-detail-list-step-value{
+  font-size: 28rpx;
+  color: #4a4a4a;
+}
+.cook-detail-list-step-image{
+  width: 100%;
+  height: 400rpx;
+}

@@ -33,6 +33,7 @@ Page({
             })
             return
         }
+        wx.showNavigationBarLoading()
         wx.cloud.callFunction({
             name: 'tax',
             data:{
@@ -42,6 +43,7 @@ Page({
             
         })
         .then(res => {
+          wx.hideNavigationBarLoading()
             let socialMax = taxVal > 21396 ? 21396 : taxVal;
             let homeMax = taxVal > 21400 ? 21400 : taxVal;
             let pensionPercent = 0.08;
