@@ -38,16 +38,23 @@ Page({
         })
         .then(res => {
           wx.hideNavigationBarLoading()
-          let lists = this.data.lists;
-          let total = res.result.data.total
-          console.log(total)
-          res.result.data.result.forEach(item => {
-            lists.push(item)
-          })
-          this.setData({
-            lists,
-            total
-          })
+          if(res.result.data.total) {
+            let lists = this.data.lists;
+            let total = res.result.data.total
+            console.log(total)
+            res.result.data.result.forEach(item => {
+              lists.push(item)
+            })
+            this.setData({
+              lists,
+              total
+            })
+          } else {
+            wx.showToast({
+              title: '暂无您搜索得菜谱，请重新输入新菜谱。',
+              icon: 'none'
+            })
+          }
         })
     } else {
       wx.hideNavigationBarLoading()
