@@ -89,9 +89,9 @@ Page({
             let homeCompanyVal = (homeMax * homePercent).toFixed(2);
             let workCompanyVal = (socialMax * 0.002).toFixed(2);
             let maternityCompanyVal = (homeMax * 0.01).toFixed(2);
-            let totalPersonalVal = (Number(oldCompanyVal) + Number(healthCompanyVal) + Number(loseCompanyVal) + Number(homeCompanyVal) + Number(workCompanyVal) + Number(maternityCompanyVal)).toFixed(2)
+            let totalCompanyVal = (Number(oldCompanyVal) + Number(healthCompanyVal) + Number(loseCompanyVal) + Number(homeCompanyVal) + Number(workCompanyVal) + Number(maternityCompanyVal)).toFixed(2)
             let socialVal = (socialMax * pensionPercent + socialMax * healthPercent + homeMax * homePercent + socialMax * losePercent).toFixed(2);
-            let afterPersonalVal = (taxVal - 5000).toFixed(2);
+            let afterPersonalVal = taxVal - socialVal;
             let moneyVal = (taxVal - Number(socialVal) - 5000).toFixed(2);
             let personalVal = 0;
             if (moneyVal > 80000) {
@@ -124,8 +124,8 @@ Page({
                 homeCompanyVal,
                 workCompanyVal,
                 maternityCompanyVal,
-                totalPersonalVal,
-                totalCompanyVal: socialVal,
+                totalPersonalVal: socialVal,
+                totalCompanyVal,
                 afterPersonalVal,
                 personalTaxVal: personalVal,
                 taxAfterVale
