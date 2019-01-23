@@ -23,9 +23,9 @@ Page({
                             wx.redirectTo({
                                 url: '/pages/tools/index'
                             })
-                            
+
                             app.globalData.userInfo = res.userInfo;
-                            console.log( app.globalData.userInfo)
+                            console.log(app.globalData.userInfo)
                         }
                     })
                 } else {
@@ -42,16 +42,16 @@ Page({
                 url: '/pages/tools/index'
             })
             const userInfo = e.detail.userInfo;
-          wx.showNavigationBarLoading()
+            wx.showNavigationBarLoading()
             wx.cloud.callFunction({
                 name: 'login',
                 data: userInfo
             })
             .then(res => {
-              wx.hideNavigationBarLoading()
+                wx.hideNavigationBarLoading()
                 app.globalData.userInfo = e.detail.userInfo;
             })
-            
+
         }
     }
 

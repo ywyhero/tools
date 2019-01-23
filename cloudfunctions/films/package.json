@@ -1,0 +1,7 @@
+{
+  "name": "films",
+  "dependencies": {
+    "request-promise": "^4.2.2",
+    "wx-server-sdk": "^0.1.3"
+  }
+}

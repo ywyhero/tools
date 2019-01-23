@@ -1,0 +1,31 @@
+.zodiac{
+    padding: 40rpx;
+}
+.zodiac-lists{
+    display: flex;
+    flex-wrap: wrap;
+}
+.zodiac-list{
+    width: 46%;
+    display: flex;
+    margin-right: 40rpx;
+    margin-bottom: 40rpx;
+}
+
+.zodiac-list:nth-of-type(2n) {
+    margin-right: 0;
+}
+.zodiac-list-img{
+    width: 104rpx;
+    height: 104rpx;
+    margin-right: 20rpx;
+}
+.zodiac-list-title{
+    font-size: 26rpx;
+    color: #4a4a4a;
+    font-weight: 700;
+}
+.zodiac-list-date{
+    font-size: 24rpx;
+    color: #4a4a4a;
+}

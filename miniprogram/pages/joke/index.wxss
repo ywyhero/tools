@@ -1,0 +1,11 @@
+.joke{
+    padding: 20rpx;
+}
+.joke-list{
+    margin-bottom: 20rpx;
+    border: 1rpx solid #c1c1c1;
+    border-radius: 4rpx;
+    color: #4a4a4a;
+    font-size: 28rpx;
+    padding: 20rpx;
+}

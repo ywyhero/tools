@@ -7,7 +7,9 @@ Page({
         selectedVal: ''
     },
     onLoad(options) {
-        console.log(options)
+        wx.setNavigationBarTitle({
+            title: `看运气`
+        })
       wx.showNavigationBarLoading()
         let name = '',
         selectVal='',

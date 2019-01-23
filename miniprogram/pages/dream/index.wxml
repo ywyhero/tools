@@ -1,0 +1,16 @@
+<view class="dream">
+    <view class="dream-search">
+        <input type="text" placeholder="请输入解梦的关键字" bindinput="bindInput" value="{{p}}" bindconfirm="searchResult" class="dream-search-input" />
+        <view class="dream-search-btn" bindtap="searchResult">搜索</view>
+    </view>
+    <scroll-view scroll-y style="height: {{height}}px;">
+        <view wx:if="{{lists.length === 0}}" class="dream-empty">暂无数据</view>
+        <view class="dream-lists" wx:if="{{lists.length > 0}}">
+            <view class="dream-list" wx:for="{{lists}}" wx:key="index" bindtap="toDetail" data-title="{{item.title}}" data-list="{{item.list}}">
+                <view class="dream-list-title">关键词：{{item.title}}</view>
+                <view class="dream-list-des">描述：{{item.des}}</view>
+            </view>
+        </view>
+        
+    </scroll-view>
+</view>

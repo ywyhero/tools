@@ -1,0 +1,9 @@
+<view class="films">
+    <view class="films-citt-list" wx:for="{{cities}}" wx:key="index">
+        <view class="films-city-letter">{{item.letter}}</view>
+        <view class="films-city-names">
+            <view wx:for="{{item.cities}}" bindtap="toDetail" wx:for-item="itm" wx:for-index="idx" wx:key="idx" class="films-city-name" data-id="{{itm.id}}">{{itm.city_name}}</view>
+        </view>
+    </view>
+   
+</view>

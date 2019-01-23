@@ -1,0 +1,6 @@
+<view class="dream-detail">
+    <view class="dream-detail-title">{{title}}</view>
+    <view class="dream-detail-lists">
+        <view class="dream-detail-list" wx:for="{{lists}}" wx:key="index">{{item}}</view>
+    </view>
+</view>

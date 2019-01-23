@@ -1,0 +1,13 @@
+<view class="history-today">
+    <view class="history-today-date">{{date}}</view>
+    <view class="history-today-lists">
+        <view class="history-today-list" wx:for="{{lists}}" wx:key="index">
+            <image mode="aspectFill" class="history-today-list-img" src="{{item.pic}}"></image>
+            <view class="history-today-list-main">
+                <view class="history-today-list-title">{{item.title}}</view>
+                <view class="history-today-list-date">{{item.year}}年{{item.month}}月{{item.day}}日 {{item.lunar}}</view>
+                <view class="history-today-list-des">{{item.des}}</view>
+            </view>
+        </view>
+    </view>
+</view>

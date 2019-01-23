@@ -1,0 +1,82 @@
+.zodiac-detail{
+   
+}
+.zodiac-detail-top{
+    padding: 20rpx;
+    border-bottom: 2rpx solid #c1c1c1;
+    display: flex;
+    align-items: center;
+}
+.zodiac-detail-img{
+    width: 200rpx;
+    border-radius: 50%;
+    height: 200rpx;
+    margin-right: 20rpx;
+}
+.zodiac-detail-main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.zodiac-detail-title{
+    font-size: 28rpx;
+    font-weight: 700;
+    color: #4a4a4a;
+}
+.zodiac-detail-date{
+    font-size: 26rpx;
+    color: #4a4a4a;
+}
+.zodiac-detail-des{
+    font-size: 24rpx;
+    color: #4a4a4a;
+    font-weight: normal;
+}
+.zodiac-detail-tabs{
+    display: flex;
+}
+.zodiac-detail-tab{
+    width: 20%;
+    text-align: center;
+    line-height: 80rpx;
+    color: #4a4a4a;
+    position: relative;
+    color: #4a4a4a;
+    font-size: 28rpx;
+}
+.zodiac-detail-tab.active{
+    border-bottom: 4rpx solid rgba(0,0,0,.3);
+
+}
+.zodiac-detail-lucky{
+    padding: 20rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.zodiac-detail-lucky-val{
+    width: 50%;
+    font-size: 28rpx;
+    color: #4a4a4a;
+    margin-bottom: 20rpx;
+}
+.zodiac-detail-lucky-other-val{
+    font-size: 28rpx;
+    color: #4a4a4a;
+}
+.zodiac-detail-week-lucky{
+    padding: 20rpx;
+}
+.zodiac-detail-week-lucky-date{
+    text-align: center;
+    font-size: 28rpx;
+    color: #4a4a4a;
+    font-weight: 700;
+    margin-bottom: 20rpx;
+}
+.zodiac-detail-week-lucky-val{
+    font-size: 28rpx;
+    color: #4a4a4a;
+    margin-bottom: 20rpx;
+}

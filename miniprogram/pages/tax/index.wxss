@@ -26,4 +26,15 @@
     background: #fff;
     font-size: 30rpx;
     font-weight: 700;
+    margin-top: 40rpx;
+}
+.tax-main-list{
+    display: flex;
+    width: 100%;
+}
+.tax-main-list-item{
+    width: 33.3%;
+    font-size: 26rpx;
+    color: #4a4a4a;
+    margin-bottom: 20rpx;
 }

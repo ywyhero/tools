@@ -1,0 +1,11 @@
+<view class="zodiac">
+    <view class="zodiac-lists">
+        <view class="zodiac-list" wx:for="{{lists}}" wx:key="index" data-des="{{item.des}}" data-url="{{item.url}}" data-date="{{item.date}}" data-title="{{item.name}}" bindtap="toDetail">
+            <image mode="aspectFill" class="zodiac-list-img" src="./../../assets/images/{{item.url}}"></image>
+            <view class="zodiac-list-main">
+                <view class="zodiac-list-title">{{item.name}}</view>
+                <view class="zodiac-list-date">{{item.date}}</view>
+            </view>
+        </view>
+    </view>
+</view>

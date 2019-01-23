@@ -1,0 +1,5 @@
+<view class="joke">
+    <view class="joke-lists">
+        <view class="joke-list" wx:for="{{lists}}" wx:key="index">{{item.content}}</view>
+    </view>
+</view>

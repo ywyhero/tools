@@ -1,0 +1,34 @@
+.history-today{
+    padding: 20rpx;
+}
+.history-today-date{
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 32rpx;
+    font-weight: 700;
+}
+.history-today-lists{
+    margin-top: 40rpx;
+}
+.history-today-list{
+    width: 100%;
+    margin-bottom: 20rpx;
+    border: 1rpx solid #c1c1c1;
+    border-radius: 4rpx;
+    padding: 20rpx;
+}
+.history-today-list-img{
+    width: 100%;
+    height: 800rpx;
+}
+.history-today-list-title{
+    color: #4a4a4a;
+    font-weight: 700;
+    font-size: 30rpx;
+    
+}
+.history-today-list-date,
+.history-today-list-des{
+    color: #4a4a4a;
+    font-size: 28rpx;
+}

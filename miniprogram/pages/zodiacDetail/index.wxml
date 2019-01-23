@@ -1,0 +1,53 @@
+<view class="zodiac-detail">
+    <view class="zodiac-detail-top">
+        <image mode="aspectFill" class="zodiac-detail-img" src="./../../assets/images/{{url}}"></image>
+        <view class="zodiac-detail-main">
+            <view class="zodiac-detail-title">{{data.name}}</view>
+            <view class="zodiac-detail-date">{{date}}</view>
+            <view class="zodiac-detail-des">{{des}}</view>
+        </view>
+    </view>
+    <view class="zodiac-detail-tabs">
+        <view class="zodiac-detail-tab {{type === 'today' ? 'active' : ''}}" bindtap="tabClick" data-date="today">今日</view>
+        <view class="zodiac-detail-tab {{type === 'tomorrow' ? 'active' : ''}}" bindtap="tabClick" data-date="tomorrow">明日</view>
+        <view class="zodiac-detail-tab {{type === 'week' ? 'active' : ''}}" bindtap="tabClick" data-date="week">本周</view>
+        <view class="zodiac-detail-tab {{type === 'month' ? 'active' : ''}}" bindtap="tabClick" data-date="month">本月</view>
+        <view class="zodiac-detail-tab {{type === 'year' ? 'active' : ''}}" bindtap="tabClick" data-date="year">本年</view>
+    </view>
+    <view class="zodiac-detail-lucky" hidden="{{!(type === 'today' || type === 'tomorrow')}}">
+        <view class="zodiac-detail-lucky-val">综合运势:  {{data.all}}</view>
+        <view class="zodiac-detail-lucky-val">爱情运势:  {{data.love}}</view>
+        <view class="zodiac-detail-lucky-val">事业学业:  {{data.work}}</view>
+        <view class="zodiac-detail-lucky-val">财富运势:  {{data.money}}</view>
+        <view class="zodiac-detail-lucky-val">健康指数:  {{data.health}}</view>
+        <view class="zodiac-detail-lucky-val">幸运数字:  {{data.number}}</view>
+        <view class="zodiac-detail-lucky-val">幸运颜色:  {{data.color}}</view>
+        <view class="zodiac-detail-lucky-val">速配星座:  {{data.QFriend}}</view>
+        <view class="zodiac-detail-lucky-other-val">今日概述:  {{data.summary}}</view>
+    </view>
+    <view class="zodiac-detail-week-lucky" hidden="{{!(type === 'week')}}" >
+        <view class="zodiac-detail-week-lucky-date">{{data.date}}</view>
+        <view class="zodiac-detail-week-lucky-val">{{data.love}}</view>
+        <view class="zodiac-detail-week-lucky-val">{{data.work}}</view>
+        <view class="zodiac-detail-week-lucky-val">{{data.money}}</view>
+        <view class="zodiac-detail-week-lucky-val">{{data.health}}</view>
+    </view>
+    <view class="zodiac-detail-week-lucky" hidden="{{!(type === 'month')}}">
+        <view class="zodiac-detail-week-lucky-date">{{data.date}}</view>
+        <view class="zodiac-detail-week-lucky-val">综合运势:  {{data.all}}</view>
+        <view class="zodiac-detail-week-lucky-val">爱情运势:  {{data.love}}</view>
+        <view class="zodiac-detail-week-lucky-val">事业学业:  {{data.work}}</view>
+        <view class="zodiac-detail-week-lucky-val">财富运势:  {{data.money}}</view>
+        <view class="zodiac-detail-week-lucky-val">健康指数:  {{data.health}}</view>
+    </view>
+    <view class="zodiac-detail-week-lucky" hidden="{{!(type === 'year')}}">
+        <view class="zodiac-detail-week-lucky-date">{{data.date}}</view>
+        <view class="zodiac-detail-week-lucky-val">幸运物:  {{data.luckeyStone}}</view>
+        <view class="zodiac-detail-week-lucky-val">爱情运势:  {{data.love[0]}}</view>
+        <view class="zodiac-detail-week-lucky-val">事业学业:  {{data.career[0]}}</view>
+        <view class="zodiac-detail-week-lucky-val">财富运势:  {{data.finance[0]}}</view>
+        <view class="zodiac-detail-week-lucky-val">健康指数:  {{data.health[0]}}</view>
+        <view class="zodiac-detail-week-lucky-val">精要简述:  {{data.mima.info}}</view>
+        <view class="zodiac-detail-week-lucky-val">{{data.mima.text[0]}}</view>
+    </view>
+</view>

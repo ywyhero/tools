@@ -1,20 +1,65 @@
 <view class="tax"> 
-    <view class="tax-tag">起征点：5000元(已实际到手为准)</view>
+    <view class="tax-tag">起征点：5000元(以实际到手为准)</view>
     <view class="tax-box">
         <view class="tax-text">税前工资：</view>
         <input bindinput="taxInput" placeholder="请输入您的税前薪资" value="{{taxVal}}" class="tax-input" type="number"/>
     </view>
-    <view class="tax-box">
-        <view class="tax-text">社保需缴：</view>
-        <input placeholder="您社保需要缴纳的部分" value="{{socialVal}}" disabled class="tax-input" type="number"/>
-    </view>
-    <view class="tax-box">
-        <view class="tax-text">个税扣除：</view>
-        <input placeholder="您个税需要缴纳的部分"  value="{{personalVal}}"disabled class="tax-input" type="number"/>
-    </view>
-    <view class="tax-box">
-        <view class="tax-text">税后薪资：</view>
-        <input placeholder="您拿到手的薪资" disabled value="{{taxAfterVale}}" class="tax-input" type="number"/>
+    <view class="tax-main">
+        <view class="tax-main-list">
+            <view class="tax-main-list-item"></view>
+            <view class="tax-main-list-item">个人应缴部分</view>
+            <view class="tax-main-list-item">单位应缴部分</view>
+        </view>
+        <view class="tax-main-list">
+            <view class="tax-main-list-item">养老保险</view>
+            <view class="tax-main-list-item">{{oldPersonalVal}} (8%)</view>
+            <view class="tax-main-list-item">{{oldCompanyVal}} (20%)</view>
+        </view>
+        <view class="tax-main-list">
+            <view class="tax-main-list-item">医疗保险</view>
+            <view class="tax-main-list-item">{{healthPersonalVal}} (2%)</view>
+            <view class="tax-main-list-item">{{healthCompanyVal}} (9.5%)</view>
+        </view> 
+        <view class="tax-main-list">
+            <view class="tax-main-list-item">失业保险</view>
+            <view class="tax-main-list-item">{{losePersonalVal}} (0.5%)</view>
+            <view class="tax-main-list-item">{{loseCompanyVal}} (0.5%)</view>
+        </view>
+        <view class="tax-main-list">
+            <view class="tax-main-list-item">住房公积金</view>
+            <view class="tax-main-list-item">{{homePersonalVal}} (7%)</view>
+            <view class="tax-main-list-item">{{homeCompanyVal}} (7%)</view>
+        </view>
+        <view class="tax-main-list">
+            <view class="tax-main-list-item">工伤保险</view>
+            <view class="tax-main-list-item"></view>
+            <view class="tax-main-list-item">{{workCompanyVal}} (0.2%)</view>
+        </view>
+        <view class="tax-main-list">
+            <view class="tax-main-list-item">生育保险</view>
+            <view class="tax-main-list-item"></view>
+            <view class="tax-main-list-item">{{maternityCompanyVal}} (1%)</view>
+        </view>
+        <view class="tax-main-list">
+            <view class="tax-main-list-item">共计支出</view>
+            <view class="tax-main-list-item">{{totalPersonalVal}}</view>
+            <view class="tax-main-list-item">{{totalCompanyVal}}</view>
+        </view>
+        <view class="tax-main-list">
+            <view class="tax-main-list-item">扣除四金后月薪</view>
+            <view class="tax-main-list-item">{{afterPersonalVal}}</view>
+            <view class="tax-main-list-item"></view>
+        </view>
+        <view class="tax-main-list">
+            <view class="tax-main-list-item">个人所得税</view>
+            <view class="tax-main-list-item">{{personalTaxVal}}</view>
+            <view class="tax-main-list-item"></view>
+        </view>
+        <view class="tax-main-list">
+            <view class="tax-main-list-item">税后月薪</view>
+            <view class="tax-main-list-item">{{taxAfterVale}}</view>
+            <view class="tax-main-list-item"></view>
+        </view>
     </view>
     <button class="tax-btn" bindtap="taxCompute">薪资计算</button>
 </view>

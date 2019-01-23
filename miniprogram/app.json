@@ -1,12 +1,22 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/zodiacDetail/index",
+    
+    "pages/zodiac/index",
+   
+    "pages/historyToday/index",
+    "pages/films/index",
+    "pages/cityFilms/index",
+    "pages/joke/index",
+    "pages/dream/index",
+    "pages/dreamDetail/index",
+    "pages/tax/index",
     "pages/cookBook/index",
     "pages/cookDetail/index",
-    
     "pages/tools/index",
-    "pages/lucky/index",
-    "pages/tax/index"
+    "pages/lucky/index"
+    
    
   ],
   "window": {

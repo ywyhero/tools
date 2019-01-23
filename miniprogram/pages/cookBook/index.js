@@ -11,6 +11,9 @@ Page({
     pn: 0
   },
   onLoad() {
+      wx.setNavigationBarTitle({
+        title: `菜谱大全`
+    })
     let rpx = wx.getSystemInfoSync().windowWidth / 750;
     let height = wx.getSystemInfoSync().windowHeight - 104 * rpx;
     this.setData({

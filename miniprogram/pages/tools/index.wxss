@@ -1,7 +1,10 @@
 .tools{
 
 }
-.tools-img{
+.tools-swiper{
+    height: 400rpx;
+}
+.tools-image{
     width: 100%;
     height: 400rpx;
 }
