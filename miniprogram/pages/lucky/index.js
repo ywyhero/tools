@@ -28,6 +28,7 @@ Page({
         })
         .then(res => {
             let {data} = res.result.data.lists
+           
             data = data.sort(() => Math.random() - 0.5);
             this.setData({
                 lists: data,

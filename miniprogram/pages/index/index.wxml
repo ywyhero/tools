@@ -1,13 +1,26 @@
-<!--index.wxml-->
-<view class="container" wx:if="{{isShow}}">
-  <image class="userinfo-avatar" src="{{avatarUrl}}"></image>
-  <view class="userinfo-name">日常小工具</view>
-  <view class="userinfo">
-    <button 
-      open-type="getUserInfo" 
-      bindgetuserinfo="onGetUserInfo"
-      class="userinfo-btn"
-    >授权登录</button>
-  </view>
-
+<view class="tools">
+    <image src="https://statics.pnlyy.com/mini_home_bg.png" mode="widthFix" class="tools-img"></image>
+    <swiper class="tools-swiper" next-margin="14rpx"previous-margin="14rpx" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}">
+        <block wx:for="{{banners}}" wx:key="index">
+            <swiper-item class="tools-swiper-item">
+                <image bindtap="toDetail" data-url="{{item.path}}" mode="aspectFill" src="{{item.url}}" class="tools-image" />
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="tools-lists">
+        <view class="tools-list" wx:for="{{toolsLists}}" wx:key="index">
+            <view class="tools-list-title">
+                <view class="tools-list-main">{{item.title}}</view>
+                <view class="tools-list-des">--{{item.des}}</view>
+            </view>
+            <view class="tools-list-items">
+                <view class="tools-list-item" data-url="{{itm.url}}" bindtap="toDetail" wx:for="{{item.lists}}" wx:for-item="itm" wx:for-index="idx" wx:key="idx">
+                    <image class="tools-list-item-img" mode="aspectFill" src="{{itm.path}}"></image>
+                    <view class="tools-list-item-title">{{itm.title}}</view>
+                </view>
+            </view>
+           
+        </view>
+    </view>
 </view>
+<button wx:if="{{isShow}}" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="login"></button>

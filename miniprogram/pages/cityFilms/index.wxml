@@ -1,8 +1,0 @@
-<view class="city-films">
-    <view class="city-films-lists">
-        <view class="city-films-list" wx:for="{{films}}" wx:key="index" data-movieId="{{item.movieId}}" bindtap="toDetail">
-            <image mode="aspectFill" class="city-films-list-img" src="{{item.pic_url}}"></image>
-            <view class="city-films-list-name">{{item.movieName}}</view>
-        </view>
-    </view>
-</view>
